@@ -1,0 +1,27 @@
+version: "2"
+
+services:
+  backend: 
+    build: ./docker_backend
+      
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./docker_backend/.env 
+    networks:
+      - app-moto
+
+  frontend:
+    build: ./docker_frontend
+      
+    ports:
+      - "4001:80"
+
+    depends_on:
+      - backend
+    networks:
+      - app-moto
+
+networks:
+  app-moto:
+    driver: bridge
