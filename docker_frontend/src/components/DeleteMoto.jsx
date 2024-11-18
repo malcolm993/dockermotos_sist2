@@ -7,7 +7,9 @@ function DeleteMoto() {
 
     const handleDelete = async () => {
         await fetch(API_ROUTES.DELETE_MOTO(patente),{ 
-            headers :{"ngrok-skip-browser-warning": 'true'}} ,{ method: 'DELETE' });
+            method: 'DELETE' , 
+            headers :{"ngrok-skip-browser-warning": 'true'}
+        } );
     };
 
     return (

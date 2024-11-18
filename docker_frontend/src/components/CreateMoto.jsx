@@ -8,9 +8,10 @@
         const handleSubmit = async (e) => {
             e.preventDefault();
             await fetch(API_ROUTES.CREATE_MOTO,{ 
-                headers :{"ngrok-skip-browser-warning": 'true'}}, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers :{
+                    'Content-Type': 'application/json',
+                    "ngrok-skip-browser-warning": 'true'},        
                 body: JSON.stringify(moto),
             });
         };

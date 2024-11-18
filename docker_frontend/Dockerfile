@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Añade esto al inicio de tu Dockerfile para evitar conflictos
-RUN rm -rf /app/node_modules
+#RUN rm -rf /app/node_modules
 
 # Instala las dependencias
 RUN npm install

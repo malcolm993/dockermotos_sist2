@@ -1,7 +1,7 @@
 // src/routes.js
 
-const BASE_URL = "https://6b9e-190-51-34-131.ngrok-free.app";
-
+const BASE_URL = "https://5c66-190-51-31-185.ngrok-free.app";
+//const BASE_URL = "http://localhost:4000";
 export const API_ROUTES = {
     GET_ALL_MOTOS: `${BASE_URL}/motos/all`,
     CREATE_MOTO: `${BASE_URL}/motos/create`,

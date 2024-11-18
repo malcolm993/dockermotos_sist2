@@ -9,7 +9,10 @@ function UpdateMoto() {
     const handleUpdate = async () => {
         await fetch(API_ROUTES.UPDATE_MOTO(patente), {
             method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json' ,
+                "ngrok-skip-browser-warning": 'true'
+            },
             body: JSON.stringify(moto),
         });
     };
